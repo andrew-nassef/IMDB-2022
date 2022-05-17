@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{61B19FF7-F24F-473F-9347-E4A9E793067C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>IDMB_project</RootNamespace>
+    <AssemblyName>IDMB project</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Oracle.DataAccess, Version=2.112.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\app\andre\product\11.2.0\dbhome_1\ODP.NET\bin\2.x\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Browse_Movie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Browse_Movie.Designer.cs">
+      <DependentUpon>Browse_Movie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_Review_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_Review_Form.Designer.cs">
+      <DependentUpon>Add_Review_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Menu_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Menu_Form.Designer.cs">
+      <DependentUpon>Admin_Menu_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_Rating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_Rating.Designer.cs">
+      <DependentUpon>Add_Rating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Movie_reviews_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Movie_reviews_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports_form.Designer.cs">
+      <DependentUpon>Reports_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Form.Designer.cs">
+      <DependentUpon>Menu_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Movies_by_category.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Movies_by_category.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Register_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register_Form.Designer.cs">
+      <DependentUpon>Register_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Movie_Review.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movie_Review.Designer.cs">
+      <DependentUpon>Movie_Review.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_Form.Designer.cs">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Users_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Users_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Add_Rating.resx">
+      <DependentUpon>Add_Rating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_Review_Form.resx">
+      <DependentUpon>Add_Review_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Menu_Form.resx">
+      <DependentUpon>Admin_Menu_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Browse_Movie.resx">
+      <DependentUpon>Browse_Movie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_Form.resx">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Form.resx">
+      <DependentUpon>Menu_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movies_by_category.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Movies_by_category.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movie_Review.resx">
+      <DependentUpon>Movie_Review.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movie_reviews_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Movie_reviews_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register_Form.resx">
+      <DependentUpon>Register_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports_form.resx">
+      <DependentUpon>Reports_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Users_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="textures\white star.png" />
+    <None Include="bin\Debug\Textures\star.png" />
+    <None Include="bin\Debug\Textures\white star.png" />
+    <None Include="bin\Debug\Textures\Movies\The batman.jpg" />
+    <Content Include="textures\background.jpg" />
+    <None Include="textures\back_ground.jpg" />
+    <Content Include="textures\Browse_Background.jpg" />
+    <None Include="textures\Film_background.jpg" />
+    <Content Include="textures\left.png" />
+    <Content Include="textures\Movies\Encanto.jpeg" />
+    <Content Include="textures\Movies\Intersteller.jpg" />
+    <Content Include="textures\Movies\Sonic.jpg" />
+    <Content Include="textures\Movies\spider-man.jpg" />
+    <Content Include="textures\Movies\The_adam_project.jpg" />
+    <Content Include="textures\Movies\The_batman.jpg" />
+    <Content Include="textures\right.png" />
+    <None Include="textures\Search.png" />
+    <None Include="textures\star.png" />
+    <Content Include="textures\textbox.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
